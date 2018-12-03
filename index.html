@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.3.10/d3.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=visualization">
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=geometry"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="markerclusterer.js"></script>
+    <script type="text/javascript" src="graham_scan.min.js"></script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <style>
+    html,
+    body,
+    #map {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .layover {
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <button id="btnReset" onclick="reset()" >Reset</button>
+    <button id="btnSubPoints" onclick="subPoints()" >SubjectsPoints</button>
+    <button id="btnCompsPoly" onclick="compsPoly()" >CompsPolygon</button>
+    <button id="btnCompsPoints" onclick="compsPoints()" >CompsPoints</button>
+    <button id="btnCompsPolygon" onclick="compboxPoly()" >CompsPolygon(Distinct)</button>
+    <button id="btnSubjsPolygon" onclick="subboxPoly()" >SubjectPolygon(Distinct)</button>
+    <button id="btnCompsExtended" onclick="extensions()" >CompsPolygon(Extended)</button>
+    <button id="l1" onclick="l1()" >level 1</button>
+    <button id="l2" onclick="l2()" >level 2</button>
+    <button id="l3" onclick="l3()" >level 3</button>
+    <button id="l4" onclick="l4()" >level 4</button>
+    <button id="l5" onclick="l5()" >level 5</button>
+    <button id="btnClusters" onclick="clusters()" >Clusters</button>
+    <div id="map"></div>
+</body>
+<script type="text/javascript" src="viz.js"></script>
